@@ -1,0 +1,7 @@
+1.I recently submitted by Capstone Project but was not passed because I did not meet one of the requirements which is the following:
+Must implement at least one of the three If it regularly pulls or sends data to/from a web service or API, app updates data in its cache at regular intervals using a SyncAdapter or JobDispacter. OR If it needs to pull or send data to/from a web service or API only once, or on a per request basis (such as a search application), app uses an IntentService to do so.ORIt it performs short duration, on-demand requests(such as search), app uses an AsyncTask.
+My understanding of why these requirements are there is that the heavy process should not run on the UI thread but should run in the Background Thread and I have used plenty of frameworks that runs that uses Background Processing.
+->I am using Android Architecture Components: To update and retrieve from the Room Database using LiveData and ViewModel which is an excellent example for using Async communication.
+
+2.I do not intend to make use of ads  in this project but since i saw that ads can be implemented i decided to use it in 1 case only. Hence the add is displayed only once when u exit  the detailed restaurant  from the nearby restaurants fro the first time. 
+

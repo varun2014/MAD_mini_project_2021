@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="restaurant"
+            type="com.android.udacity_foodquest.model.geocode.NearbyRestaurant" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/nearby_restaurants_cardview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/layout_small_margin"
+        app:cardCornerRadius="@dimen/layout_small_margin">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/nearby_restaurants_thumb"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/restaurant_img_height"
+                android:contentDescription="@string/restaurant_featured_img"
+                android:scaleType="centerCrop"
+                android:src="@drawable/restaurantsampleimg"
+                app:imageUrl="@{restaurant.restaurant.featuredImage}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/nearby_restaurants_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/layout_small_margin"
+                android:layout_marginLeft="@dimen/layout_small_margin"
+                android:layout_marginRight="@dimen/layout_small_margin"
+                android:layout_marginStart="@dimen/layout_small_margin"
+                android:layout_marginTop="@dimen/layout_small_margin"
+                android:text="@{restaurant.restaurant.name}"
+                android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/nearby_restaurants_thumb"
+                tools:text="Restaurant Name" />
+
+            <TextView
+                android:id="@+id/nearby_restaurants_short_adress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/layout_small_margin"
+                android:layout_marginEnd="@dimen/layout_small_margin"
+                android:layout_marginLeft="@dimen/layout_small_margin"
+                android:layout_marginRight="@dimen/layout_small_margin"
+                android:layout_marginStart="@dimen/layout_small_margin"
+                android:layout_marginTop="@dimen/layout_tiny_margin"
+                android:singleLine="true"
+                android:text="@{restaurant.restaurant.location.locality}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/nearby_restaurants_name"
+                tools:text="Upper St Martin's Lane, Covent Garden" />
+
+            <TextView
+                android:id="@+id/nearby_restaurants_rate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/layout_small_margin"
+                android:layout_marginLeft="@dimen/layout_small_margin"
+                android:layout_marginRight="@dimen/layout_small_margin"
+                android:layout_marginStart="@dimen/layout_small_margin"
+                android:layout_marginTop="@dimen/layout_small_margin"
+                android:background="@drawable/rounded_shape"
+                android:gravity="center"
+                android:text="@{restaurant.restaurant.userRating.aggregateRating}"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/nearby_restaurants_thumb"
+                app:rateColor="@{restaurant.restaurant.userRating.ratingColor}"
+                tools:backgroundTint="@color/colorPrimaryDark"
+                tools:text="4.9" />
+
+            <ImageView
+                android:id="@+id/nearby_restaurants_main_marker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/layout_small_margin"
+                android:layout_marginLeft="@dimen/layout_small_margin"
+                android:layout_marginRight="@dimen/layout_small_margin"
+                android:layout_marginStart="@dimen/layout_small_margin"
+                android:layout_marginTop="@dimen/layout_medium_margin"
+                android:contentDescription="@string/restaurant_marker"
+                android:src="@drawable/ic_near_me"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/nearby_restaurants_name"
+                app:layout_constraintTop_toBottomOf="@+id/nearby_restaurants_thumb" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>

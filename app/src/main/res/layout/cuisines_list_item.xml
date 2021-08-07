@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="cuisine"
+            type="com.android.udacity_foodquest.model.cuisines.Cuisine" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/cuisines_list_item_image"
+            android:layout_width="@dimen/cuisine_image_width"
+            android:layout_height="@dimen/cuisine_image_height"
+            android:layout_marginBottom="@dimen/layout_small_margin"
+            android:layout_marginLeft="@dimen/layout_small_margin"
+            android:layout_marginStart="@dimen/layout_small_margin"
+            android:layout_marginTop="@dimen/layout_small_margin"
+            android:contentDescription="@string/cuisine_img"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/cuisinelogo" />
+
+        <TextView
+            android:id="@+id/cuisines_list_item_name"
+            android:layout_width="@dimen/layout_no_margin"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/layout_small_margin"
+            android:layout_marginEnd="@dimen/layout_small_margin"
+            android:layout_marginLeft="@dimen/layout_small_margin"
+            android:layout_marginRight="@dimen/layout_small_margin"
+            android:layout_marginStart="@dimen/layout_small_margin"
+            android:layout_marginTop="@dimen/layout_small_margin"
+            android:singleLine="true"
+            android:text="@{cuisine.cuisine.cuisineName}"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/barrier2"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/cuisines_list_item_image"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Cuisine Name" />
+
+        <ImageView
+            android:id="@+id/cuisines_list_right_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/layout_small_margin"
+            android:layout_marginEnd="@dimen/layout_small_margin"
+            android:layout_marginRight="@dimen/layout_small_margin"
+            android:layout_marginTop="@dimen/layout_small_margin"
+            android:contentDescription="@string/cuisines_list_right"
+            android:src="@drawable/ic_chevron_right"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/layout_small_margin"
+            android:background="#ddd"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cuisines_list_item_name"
+            app:layout_constraintVertical_bias="1.0"
+            tools:layout_editor_absoluteX="@dimen/layout_no_margin" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="left"
+            app:constraint_referenced_ids="cuisines_list_right_icon"
+            tools:layout_editor_absoluteX="384dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

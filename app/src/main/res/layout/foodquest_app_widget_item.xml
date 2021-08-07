@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/widget_wrapper"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/layout_small_margin">
+
+    <ImageView
+        android:id="@+id/widget_thumb"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/widget_img_height"
+        android:scaleType="centerCrop"
+        android:contentDescription="@string/widget_featured_img"
+        android:src="@drawable/restaurantsampleimg" />
+
+    <TextView
+        android:id="@+id/widget_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/widget_thumb"
+        android:layout_marginEnd="@dimen/layout_small_margin"
+        android:layout_marginLeft="@dimen/layout_small_margin"
+        android:textColor="@android:color/black"
+        android:layout_marginRight="@dimen/layout_small_margin"
+        android:layout_marginStart="@dimen/layout_small_margin"
+        android:layout_marginTop="@dimen/layout_small_margin"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+        tools:text="Restaurant Name" />
+
+    <TextView
+        android:id="@+id/widget_short_adress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/widget_name"
+        android:layout_marginBottom="@dimen/layout_small_margin"
+        android:layout_marginEnd="@dimen/layout_small_margin"
+        android:layout_marginLeft="@dimen/layout_small_margin"
+        android:layout_marginRight="@dimen/layout_small_margin"
+        android:layout_marginStart="@dimen/layout_small_margin"
+        android:layout_marginTop="@dimen/layout_tiny_margin"
+        android:singleLine="true"
+        tools:text="Upper Floor, Bellevue Square" />
+
+</RelativeLayout>

@@ -1,0 +1,71 @@
+<resources>
+    <string name="app_name">FoodQuest</string>
+    <string name="db_name">foodquest.db</string>
+
+    <string name="view_all">View all</string>
+    <string name="what_do_you_have_in_mind">What do you have in mind?</string>
+    <string name="restaurants_near_you">Restaurants near you</string>
+    <string name="rate_color">#%1$s</string>
+    <string name="my_location">My Location</string>
+    <string name="cuisines">Cuisines</string>
+    <string name="nearby_restaurants">Nearby Restaurants</string>
+    <string name="home">Home</string>
+    <string name="establishments">Establishments</string>
+    <string name="fav_restaurants">Favorite Restaurants</string>
+
+    <string name="navigation_drawer_open">Open drawer</string>
+    <string name="navigation_drawer_close">Close drawer</string>
+    <string name="or">or</string>
+    <string name="current_location">Current Location</string>
+    <string name="get_current_location">Get Current Location</string>
+    <string name="any_location">Any Location</string>
+    <string name="save_location">Save location</string>
+    <string name="retry">retry</string>
+
+    <string name="info">Info</string>
+    <string name="reviews">Reviews</string>
+    <string name="map">Map</string>
+    <string name="address">Address</string>
+    <string name="price_range">Price Range</string>
+    <string name="average_cost_for_two">Average Cost for Two</string>
+    <string name="online_delivery">Online Delivery</string>
+    <string name="table_booking">Table Booking</string>
+    <string name="add_to_favorites">Add to Favorites</string>
+    <string name="share">Share</string>
+
+    <string name="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
+    <string name="location_permission_warning">This app needs access to your location for current location.</string>
+    <string name="enable_gps">Enable GPS</string>
+    <string name="require_gps_message">This app requires the use of Mobile GPS. Do you wish to enable this feature</string>
+    <string name="please_wait">Please wait</string>
+    <string name="finding_your_location">Finding your location</string>
+    <string name="validating">Validating</string>
+    <string name="please_enter_valid_city_name">Please enter an appropriate city name</string>
+    <string name="added_to_favs">Added to favorites</string>
+    <string name="deleted_from_fav">Deleted from favorites</string>
+    <string name="favorites">Favorites</string>
+    <string name="widget_empty_tv_warning">There is no restaurant in favorites</string>
+    <string name="no_favorite_restaurant">There is no favorite restaurant</string>
+    <string name="no_results_found">No results found</string>
+    <string name="location_saved">Location saved</string>
+    <string name="shared_element_transition_name">shared_image</string>
+    <string name="city_zone_or_subzone">City, Zone or Subzone</string>
+    <string name="warning">Warning</string>
+    <string name="foodquest_logo">FoodQuest Logo</string>
+    <string name="restaurant_featured_img">Restaurant Featured Image</string>
+    <string name="search_warning">Search Warning</string>
+    <string name="cuisine_img">Cuisine Image</string>
+    <string name="cuisine_main_img">Cuisine Main Image</string>
+    <string name="establishment_type_img">Establishment Type Image</string>
+    <string name="widget_featured_img">Widget Featured Image</string>
+    <string name="current_location_img">Current Location Image</string>
+    <string name="table_booking_img">Table booking image</string>
+    <string name="online_delivery_img">Online delivery image</string>
+    <string name="restaurant_marker">Restaurant marker</string>
+    <string name="user_profile_img">User profile image</string>
+    <string name="cuisines_list_right">Cuisine list right</string>
+    <string name="establishment_type_right">Establishment type right</string>
+    <string name="admob_app_id">ca-app-pub-3940256099942544~3347511713</string>
+    <string name="admob_ad_unit_id">ca-app-pub-3940256099942544/1033173712</string>
+    <string name="google_maps_key">AIzaSyAeNAe8s6TkC5tiygt8vNttcsNDsPpyyZw</string>
+</resources>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="cuisine"
+            type="com.android.udacity_foodquest.model.cuisines.Cuisine" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="@dimen/cuisine_main_item_width"
+        android:layout_height="@dimen/cuisine_main_item_height">
+
+        <ImageView
+            android:id="@+id/cuisine_main_image"
+            android:layout_width="@dimen/cuisine_main_image_width"
+            android:layout_height="@dimen/cuisine_main_image_height"
+            android:layout_marginEnd="@dimen/layout_small_margin"
+            android:layout_marginLeft="@dimen/layout_small_margin"
+            android:layout_marginRight="@dimen/layout_small_margin"
+            android:layout_marginStart="@dimen/layout_small_margin"
+            android:layout_marginTop="@dimen/layout_small_margin"
+            android:contentDescription="@string/cuisine_main_img"
+            app:layout_constraintBottom_toTopOf="@+id/cuisine_main_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="spread"
+            app:srcCompat="@drawable/cuisinelogo" />
+
+        <TextView
+            android:id="@+id/cuisine_main_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/layout_small_margin"
+            android:layout_marginEnd="@dimen/layout_small_margin"
+            android:layout_marginLeft="@dimen/layout_small_margin"
+            android:layout_marginRight="@dimen/layout_small_margin"
+            android:layout_marginStart="@dimen/layout_small_margin"
+            android:layout_marginTop="@dimen/layout_small_margin"
+            android:text="@{cuisine.cuisine.cuisineName}"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cuisine_main_image"
+            tools:text="Arabian" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
